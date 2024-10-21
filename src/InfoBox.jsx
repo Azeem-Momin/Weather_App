@@ -10,21 +10,12 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 
 export default function InfoBox({ info }) {
 
-    let INIT_URL = "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/VBUPVQLFMRP33GO4WUQY4VLSMI.jpg";
-    let COLD_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnRGdLrI_kPO4d_j7JfRJE2p1YTz8Ln0rVrg&s";
-    let HOT_URL = "https://media.istockphoto.com/id/813720840/photo/summer-heat-wave-in-the-city.jpg?s=612x612&w=0&k=20&c=8DxY8mLBr1ogKBwHxxC0bd6lv8tlBXytISdAjdPBhTE=";
-    let RAIN_URL = "https://centralca.cdn-anvilcms.net/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg";
-
+   
     return (
         <div className="InfoBox">
             <div className='cardContainer'>
                 <Card sx={{ maxWidth: 345 }}>
-                    <CardMedia
-                        sx={{ height: 140 }}
-
-                     image={info.humidity > 80 ? RAIN_URL : info.temp > 15 ? HOT_URL : COLD_URL}
-                        title="green iguana"
-                    />
+                   
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
                             {info.city} 
